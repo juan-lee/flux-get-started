@@ -34,7 +34,7 @@ spec:
         - "1"
       containers:
       - name: podinfod
-        image: stefanprodan/podinfo:3.1.0
+        image: jpangdev.azurecr.io/fluxcd/podinfo:3.1.0
         imagePullPolicy: IfNotPresent
         ports:
           - name: http
@@ -73,3 +73,5 @@ spec:
           requests:
             cpu: 10m
             memory: 64Mi
+      imagePullSecrets:
+        - name: jpangdev-acr
